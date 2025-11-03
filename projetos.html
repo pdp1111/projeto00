@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça os projetos sociais da ONG Esperança Viva">
+  <title>ONG Esperança Viva - Projetos</title>
+  
+  <!-- Importação dos CSS na ordem correta -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="site-wrapper">
+  
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+  
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="header-logo">
+        <h1>ONG Esperança Viva</h1>
+      </div>
+
+      <!-- Botão menu mobile -->
+      <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navegação -->
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html" class="active">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      
+      <!-- Hero Section -->
+      <section class="hero text-center">
+        <h2>Nossos Projetos Sociais</h2>
+        <p class="text-lg">Conheça as iniciativas que estão transformando vidas e comunidades</p>
+      </section>
+
+      <!-- Filtros/Tags -->
+      <section>
+        <h3>Filtrar por Categoria</h3>
+        <div class="flex gap-2 flex-wrap">
+          <button class="tag active" onclick="filterProjects('all')">Todos</button>
+          <button class="tag" onclick="filterProjects('educacao')">Educação</button>
+          <button class="tag" onclick="filterProjects('assistencia')">Assistência Social</button>
+          <button class="tag" onclick="filterProjects('saude')">Saúde</button>
+        </div>
+      </section>
+
+      <!-- Grid de Projetos -->
+      <section>
+        <h2>Projetos em Andamento</h2>
+        <div class="grid cards-grid" id="projects-grid">
+          
+          <!-- Projeto 1 -->
+          <article class="card col-12 col-md-6 col-lg-4" data-category="educacao">
+            <img src="images/22222.JPG" alt="Crianças estudando em sala de aula" class="card-image">
+            <div class="card-body">
+              <div class="flex justify-between align-center" style="margin-bottom: var(--esp-2);">
+                <h3 class="card-title" style="margin: 0;">Educação para Todos</h3>
+                <span class="badge badge-primary">Educação</span>
+              </div>
+              <p class="card-text">Oferece aulas de reforço e apoio escolar a crianças em comunidades carentes, promovendo acesso à educação de qualidade.</p>
+              <ul class="card-text">
+                <li><strong>200+</strong> crianças atendidas</li>
+                <li><strong>15</strong> professores voluntários</li>
+                <li><strong>3</strong> núcleos de atendimento</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <span class="text-sm text-claro">Em andamento desde 2020</span>
+              <a href="#" class="btn btn-sm btn-primary" onclick="showProjectDetails(1); return false;">Saiba Mais</a>
+            </div>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="card col-12 col-md-6 col-lg-4" data-category="assistencia">
+            <img src="images/33333.jpg" alt="Voluntários distribuindo alimentos" class="card-image">
+            <div class="card-body">
+              <div class="flex justify-between align-center" style="margin-bottom: var(--esp-2);">
+                <h3 class="card-title" style="margin: 0;">Mãos que Ajudam</h3>
+                <span class="badge badge-secondary">Assistência</span>
+              </div>
+              <p class="card-text">Promove a doação de alimentos e roupas para famílias em vulnerabilidade social, garantindo dignidade e suporte básico.</p>
+              <ul class="card-text">
+                <li><strong>500+</strong> famílias assistidas mensalmente</li>
+                <li><strong>50</strong> voluntários ativos</li>
+                <li><strong>5</strong> pontos de distribuição</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <span class="text-sm text-claro">Em andamento desde 2018</span>
+              <a href="#" class="btn btn-sm btn-primary" onclick="showProjectDetails(2); return false;">Saiba Mais</a>
+            </div>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="card col-12 col-md-6 col-lg-4" data-category="saude">
+            <img src="images/33333.jpg" alt="Atendimento de saúde comunitária" class="card-image">
+            <div class="card-body">
+              <div class="flex justify-between align-center" style="margin-bottom: var(--esp-2);">
+                <h3 class="card-title" style="margin: 0;">Saúde na Comunidade</h3>
+                <span class="badge badge-success">Saúde</span>
+              </div>
+              <p class="card-text">Oferece atendimento básico de saúde, palestras educativas e campanhas de prevenção em comunidades carentes.</p>
+              <ul class="card-text">
+                <li><strong>300+</strong> atendimentos por mês</li>
+                <li><strong>8</strong> profissionais voluntários</li>
+                <li><strong>12</strong> campanhas realizadas</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <span class="text-sm text-claro">Em andamento desde 2021</span>
+              <a href="#" class="btn btn-sm btn-primary" onclick="showProjectDetails(3); return false;">Saiba Mais</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Como Ser Voluntário -->
+      <section class="bg-light">
+        <div class="grid">
+          <div class="col-12 col-md-6">
+            <h2>Como Ser Voluntário</h2>
+            <p>Quer fazer parte dessa transformação? Cadastre-se em nossa plataforma e escolha um projeto que combina com você.</p>
+            <h4>Benefícios de ser voluntário:</h4>
+            <ul>
+              <li>✅ Experiência em responsabilidade social</li>
+              <li>✅ Certificado de participação</li>
+              <li>✅ Networking com outros voluntários</li>
+              <li>✅ Satisfação de transformar vidas</li>
+            </ul>
+            <a href="cadastro.html" class="btn btn-primary btn-lg">Cadastre-se Agora</a>
+          </div>
+          
+          <div class="col-12 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3>Requisitos</h3>
+                <ul>
+                  <li>Ser maior de 16 anos</li>
+                  <li>Disponibilidade de no mínimo 4h por semana</li>
+                  <li>Comprometimento com a causa social</li>
+                  <li>Passar por entrevista e treinamento</li>
+                </ul>
+                
+                <h4 style="margin-top: var(--esp-3);">Áreas de Atuação</h4>
+                <div class="flex gap-1 flex-wrap">
+                  <span class="badge badge-primary">Ensino</span>
+                  <span class="badge badge-secondary">Logística</span>
+                  <span class="badge badge-success">Saúde</span>
+                  <span class="badge badge-warning">Comunicação</span>
+                  <span class="badge badge-light">Administração</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Como Doar -->
+      <section>
+        <h2>Como Doar</h2>
+        <div class="grid">
+          <div class="col-12 col-md-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="card-title">💰 Doação Financeira</h3>
+                <p class="card-text">Contribuições mensais ou pontuais via transferência bancária ou PIX.</p>
+                <a href="#" class="btn btn-primary" onclick="alert('Entre em contato para informações bancárias'); return false;">Doar Agora</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="card-title">📦 Doação de Itens</h3>
+                <p class="card-text">Alimentos não perecíveis, roupas, materiais escolares e produtos de higiene.</p>
+                <a href="#" class="btn btn-secondary" onclick="alert('Veja os pontos de coleta em nossa sede'); return false;">Pontos de Coleta</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="card-title">⏰ Doação de Tempo</h3>
+                <p class="card-text">Seja voluntário e doe seu tempo e habilidades para nossas causas.</p>
+                <a href="cadastro.html" class="btn btn-success">Seja Voluntário</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="alert alert-info" style="margin-top: var(--esp-4);">
+          <strong>Transparência:</strong> Todas as doações são registradas e publicamos relatórios mensais de prestação de contas em nosso site.
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 ONG Esperança Viva - Todos os direitos reservados.</p>
+      <p>Desenvolvido com ❤️ para transformar vidas</p>
+    </div>
+  </footer>
+
+  <!-- Modal de Detalhes do Projeto -->
+  <div id="projectModal" class="modal">
+    <div class="modal-backdrop" onclick="closeModal()"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Detalhes do Projeto</h3>
+        <button class="alert-close" onclick="closeModal()" aria-label="Fechar">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <p>Carregando informações...</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeModal()">Fechar</button>
+        <a href="cadastro.html" class="btn btn-primary">Quero Participar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Toggle menu mobile
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      const toggle = document.querySelector('.menu-toggle');
+      nav.classList.toggle('active');
+      toggle.classList.toggle('active');
+    }
+
+    // Filtro de projetos
+    function filterProjects(category) {
+      const projects = document.querySelectorAll('[data-category]');
+      const tags = document.querySelectorAll('.tag');
+      
+      // Atualiza tags ativas
+      tags.forEach(tag => tag.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      // Filtra projetos
+      projects.forEach(project => {
+        if (category === 'all' || project.dataset.category === category) {
+          project.style.display = '';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal de detalhes
+    function showProjectDetails(projectId) {
+      const modal = document.getElementById('projectModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalBody = document.getElementById('modalBody');
+      
+      const projectDetails = {
+        1: {
+          title: 'Educação para Todos',
+          content: `
+            <h4>Sobre o Projeto</h4>
+            <p>O projeto Educação para Todos nasceu em 2020 com o objetivo de reduzir a evasão escolar e melhorar o desempenho acadêmico de crianças em comunidades carentes.</p>
+            <h4>Como Funciona</h4>
+            <ul>
+              <li>Aulas de reforço em Português e Matemática</li>
+              <li>Apoio com material escolar</li>
+              <li>Acompanhamento pedagógico individualizado</li>
+              <li>Atividades culturais e recreativas</li>
+            </ul>
+            <h4>Resultados</h4>
+            <p>85% de melhoria nas notas dos alunos participantes e redução de 70% na evasão escolar.</p>
+          `
+        },
+        2: {
+          title: 'Mãos que Ajudam',
+          content: `
+            <h4>Sobre o Projeto</h4>
+            <p>Desde 2018, o projeto Mãos que Ajudam distribui cestas básicas, roupas e produtos de higiene para famílias em situação de vulnerabilidade.</p>
+            <h4>Como Funciona</h4>
+            <ul>
+              <li>Arrecadação de doações da comunidade</li>
+              <li>Triagem e organização dos itens</li>
+              <li>Distribuição quinzenal em 5 pontos da cidade</li>
+              <li>Cadastro e acompanhamento das famílias</li>
+            </ul>
+            <h4>Impacto</h4>
+            <p>Mais de 500 famílias atendidas mensalmente, garantindo dignidade e segurança alimentar.</p>
+          `
+        },
+        3: {
+          title: 'Saúde na Comunidade',
+          content: `
+            <h4>Sobre o Projeto</h4>
+            <p>Lançado em 2021, o projeto leva atendimento básico de saúde e educação preventiva para comunidades com difícil acesso a serviços médicos.</p>
+            <h4>Serviços Oferecidos</h4>
+            <ul>
+              <li>Consultas médicas básicas</li>
+              <li>Aferição de pressão e glicemia</li>
+              <li>Palestras sobre saúde preventiva</li>
+              <li>Campanhas de vacinação</li>
+            </ul>
+            <h4>Números</h4>
+            <p>Mais de 3.600 atendimentos realizados no último ano, com foco em prevenção e educação em saúde.</p>
+          `
+        }
+      };
+      
+      const details = projectDetails[projectId];
+      modalTitle.textContent = details.title;
+      modalBody.innerHTML = details.content;
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('projectModal').classList.remove('active');
+    }
+
+    // Fecha menu ao clicar fora
+    document.addEventListener('click', function(event) {
+      const nav = document.getElementById('main-nav');
+      const toggle = document.querySelector('.menu-toggle');
+      const isClickInside = nav.contains(event.target) || toggle.contains(event.target);
+      
+      if (!isClickInside && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        toggle.classList.remove('active');
+      }
+    });
+
+    // Fecha menu ao redimensionar
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        document.getElementById('main-nav').classList.remove('active');
+        document.querySelector('.menu-toggle').classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

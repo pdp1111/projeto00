@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ONG Esperança Viva - Transformando vidas através de projetos sociais">
+  <title>ONG Esperança Viva - Início</title>
+  
+  <!-- Importação dos CSS na ordem correta -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Google Fonts (opcional mas recomendado) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="site-wrapper">
+  
+  <!-- Skip link para acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+  
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="header-logo">
+        <h1>ONG Esperança Viva</h1>
+      </div>
+
+      <!-- Botão menu mobile -->
+      <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navegação -->
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      
+      <!-- Hero Section -->
+      <section class="hero text-center">
+        <h2>Transformando Vidas com Esperança</h2>
+        <p class="text-lg">A ONG Esperança Viva é uma organização sem fins lucrativos dedicada a transformar vidas por meio de projetos sociais nas áreas de educação, saúde e meio ambiente.</p>
+        <a href="cadastro.html" class="btn btn-primary btn-lg">Seja um Voluntário</a>
+      </section>
+
+      <!-- Quem Somos -->
+      <section>
+        <h2>Quem Somos</h2>
+        <div class="grid">
+          <div class="col-12 col-md-6 flex align-center">
+            <div>
+              <p>A ONG Esperança Viva é uma organização sem fins lucrativos dedicada a transformar vidas por meio de projetos sociais nas áreas de educação, saúde e meio ambiente.</p>
+              <p>Fundada em 2015, nossa missão é promover oportunidades e inclusão social para comunidades em situação de vulnerabilidade, sempre pautados na ética, transparência e respeito.</p>
+              <div class="flex gap-2 flex-wrap">
+                <span class="badge badge-primary">Educação</span>
+                <span class="badge badge-secondary">Saúde</span>
+                <span class="badge badge-success">Meio Ambiente</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <img src="images/11111.avif" alt="Equipe da ONG Esperança Viva" class="card-image">
+          </div>
+        </div>
+      </section>
+
+      <!-- Missão, Visão e Valores -->
+      <section>
+        <h2>Missão, Visão e Valores</h2>
+        <div class="grid cards-grid">
+          
+          <article class="card col-12 col-md-4">
+            <div class="card-body">
+              <h3 class="card-title">Missão</h3>
+              <p class="card-text">Promover oportunidades e inclusão social para comunidades em situação de vulnerabilidade através de ações transformadoras.</p>
+              <span class="badge badge-primary">Nossa Essência</span>
+            </div>
+          </article>
+
+          <article class="card col-12 col-md-4">
+            <div class="card-body">
+              <h3 class="card-title">Visão</h3>
+              <p class="card-text">Ser referência em impacto social e transparência no terceiro setor, inspirando outras organizações.</p>
+              <span class="badge badge-secondary">Nosso Futuro</span>
+            </div>
+          </article>
+
+          <article class="card col-12 col-md-4">
+            <div class="card-body">
+              <h3 class="card-title">Valores</h3>
+              <ul class="card-text">
+                <li>Solidariedade</li>
+                <li>Ética e Transparência</li>
+                <li>Respeito à Diversidade</li>
+                <li>Compromisso Social</li>
+              </ul>
+              <span class="badge badge-success">Nossos Pilares</span>
+            </div>
+          </article>
+          
+        </div>
+      </section>
+
+      <!-- Destaques/Impacto -->
+      <section class="bg-light">
+        <h2 class="text-center">Nosso Impacto</h2>
+        <div class="grid text-center">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <h3 class="text-primary" style="font-size: 3rem;">500+</h3>
+            <p class="text-bold">Famílias Atendidas</p>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <h3 class="text-secondary" style="font-size: 3rem;">1200+</h3>
+            <p class="text-bold">Crianças Beneficiadas</p>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <h3 class="text-success" style="font-size: 3rem;">150+</h3>
+            <p class="text-bold">Voluntários Ativos</p>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <h3 class="text-warning" style="font-size: 3rem;">8</h3>
+            <p class="text-bold">Anos de Atuação</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section>
+        <h2>Entre em Contato</h2>
+        <div class="grid">
+          <div class="col-12 col-md-6">
+            <h3>Fale Conosco</h3>
+            <address>
+              <p><strong>📍 Endereço:</strong> Rua da Esperança, 120 - São Paulo/SP</p>
+              <p><strong>📞 Telefone:</strong> (11) 99999-9999</p>
+              <p><strong>✉️ E-mail:</strong> <a href="mailto:contato@ongesperancaviva.org">contato@ongesperancaviva.org</a></p>
+            </address>
+            <div class="flex gap-2">
+              <a href="projetos.html" class="btn btn-primary">Ver Projetos</a>
+              <a href="cadastro.html" class="btn btn-outline">Cadastre-se</a>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h4>Horário de Atendimento</h4>
+                <p><strong>Segunda a Sexta:</strong> 9h às 18h</p>
+                <p><strong>Sábado:</strong> 9h às 13h</p>
+                <p><strong>Domingo:</strong> Fechado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 ONG Esperança Viva - Todos os direitos reservados.</p>
+      <p>Desenvolvido com ❤️ para transformar vidas</p>
+    </div>
+  </footer>
+
+  <!-- Script para menu mobile -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      const toggle = document.querySelector('.menu-toggle');
+      nav.classList.toggle('active');
+      toggle.classList.toggle('active');
+    }
+
+    // Fecha menu ao clicar fora (mobile)
+    document.addEventListener('click', function(event) {
+      const nav = document.getElementById('main-nav');
+      const toggle = document.querySelector('.menu-toggle');
+      const isClickInside = nav.contains(event.target) || toggle.contains(event.target);
+      
+      if (!isClickInside && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        toggle.classList.remove('active');
+      }
+    });
+
+    // Fecha menu ao redimensionar para desktop
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        document.getElementById('main-nav').classList.remove('active');
+        document.querySelector('.menu-toggle').classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
